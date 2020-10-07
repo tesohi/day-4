@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    height: 100vh;
+    color: #fff;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.header, .footer {
+    font-size: 2rem;
+}
+
+.header {
+    /* размещение содержимого в центре элемента */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex: 0 0 5rem;
+    background: rgb(48, 48, 48);
+}
+
+.main {
+    flex: 1 1 auto; /* позволяет основному контенту занимать всё свободное пространство */
+    background: rgb(19, 19, 19);
+    padding: 1rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* позволяет автоматически расчитывать количество и ширину элементов */
+    grid-auto-rows: 200px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(71, 71, 71);
+    font-size: 3rem;
+}
+
+.card:nth-child(odd) {
+    background: rgb(109, 109, 109);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex: 0 0 5rem;
+    background: rgb(34, 34, 34);
+}
